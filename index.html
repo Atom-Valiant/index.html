@@ -33,7 +33,7 @@
                 messageEl.textContent = `Congratulations! You guessed it in ${attempts} attempts.`;
                 // Disable input after win
                 document.getElementById("userGuess").disabled = true;
-                document.getElementbyId("resetGame").visible = true;
+            
             } else if (userGuess < randomNumber) {
                 messageEl.textContent = "Too low! Try again.";
             } else {
