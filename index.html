@@ -44,11 +44,11 @@
         function resetGame() {
                 
         document.getElementById("userGuess").disabled = false;
-            userGuess = parseInt(document.getElementById("userGuess").value = " ");
+            document.getElementById("userGuess").value = "";   
             messageEl.textContent = " ";
                 beginGame();
             
         }
     </script>
 </body>
-</html>   
+</html>
