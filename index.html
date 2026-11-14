@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Number Guesser</title>
-  
-  <link rel="stylesheet" href="styles.css">
-<script src="Number_Guesser.js"></script>
+    <title>Number Guessing Game</title>
 </head>
-
 <body>
-<form action="" method="post">
-  <h2>Choose a Number 1-100</h2>
-  <label for="number"></label>
-  <input id="guess_box" type="number" id="number" name="user_number_guess" min ="1" max="100" >
-  
-  <button type="submit">Submit</button>
-</form>   
-  
-</body>   
+    <h1>Guess the Number (1-100)</h1>
+    <input type="number" id="userGuess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Check Guess</button>
+    <p id="message"></p>
 
-</html
+    <script>
+        // Generate random number between 1 and 100
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById("userGuess").value);
+            const messageEl = document.getElementById("message");
+            attempts++;
+
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                messageEl.textContent = "Please enter a valid number between 1 and 100.";
+            } else if (userGuess === randomNumber) {
+                messageEl.textContent = `Congratulations! You guessed it in ${attempts} attempts.`;
+                // Disable input after win
+                document.getElementById("userGuess").disabled = true;
+            } else if (userGuess < randomNumber) {
+                messageEl.textContent = "Too low! Try again.";
+            } else {
+                messageEl.textContent = "Too high! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>   
