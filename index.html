@@ -9,7 +9,6 @@
     <button onclick="checkGuess()">Check Guess</button>
     <p id="message"></p> 
     
-    <button onclick="beginGame()">Begin Game</button> 
    
     <button onclick="resetGame()">Reset Game</button> 
     
@@ -21,6 +20,7 @@
         const randomNumber = Math.floor(Math.random() * 100) + 1;
         let attempts = 0;
     }
+        beginGame();
 
         function checkGuess() {
             const userGuess = parseInt(document.getElementById("userGuess").value);
