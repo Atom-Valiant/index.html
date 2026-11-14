@@ -10,7 +10,7 @@
     <p id="message"></p> 
     
     <p>
-    <button onclick="resetGame()" id="resetGame">Reset Game</button> 
+    <button onclick="resetGame()" >Reset Game</button> 
     </p>
     <script>
 
@@ -31,7 +31,7 @@
                 messageEl.textContent = `Congratulations! You guessed it in ${attempts} attempts.`;
                 // Disable input after win
                 document.getElementById("userGuess").disabled = true;
-            
+
             } else if (userGuess < randomNumber) {
                 messageEl.textContent = "Too low! Try again.";
             } else {
