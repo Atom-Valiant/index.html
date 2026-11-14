@@ -14,10 +14,7 @@
     </p>
     <script>
 
-    function resetGame() {
-       
-        document.getElementById("userGuess").disabled = false;
-    }
+    
         // Generate random number between 1 and 100
         const randomNumber = Math.floor(Math.random() * 100) + 1;
         let attempts = 0;
@@ -39,6 +36,11 @@
                 messageEl.textContent = "Too low! Try again.";
             } else {
                 messageEl.textContent = "Too high! Try again.";
+            }
+
+            function resetGame() {
+       
+        document.getElementById("userGuess").disabled = false;
             }
         }
     </script>
