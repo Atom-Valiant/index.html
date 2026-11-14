@@ -14,6 +14,7 @@
         const randomNumber = Math.floor(Math.random() * 100) + 1;
         let attempts = 0;
         document.getElekentById("userGuess").disabled = false;
+        <button onclick="resetGame()">Reset Game</button>
     }
 
         function checkGuess() {
@@ -27,7 +28,7 @@
                 messageEl.textContent = `Congratulations! You guessed it in ${attempts} attempts.`;
                 // Disable input after win
                 document.getElementById("userGuess").disabled = true;
-                <button onclick="resetGame()">Reset Game</button>
+                resetGame();
             } else if (userGuess < randomNumber) {
                 messageEl.textContent = "Too low! Try again.";
             } else {
