@@ -14,11 +14,11 @@
    
     <script>
 
-    
+    function beginGame{
         // Generate random number between 1 and 100
         const randomNumber = Math.floor(Math.random() * 100) + 1;
         let attempts = 0;
-         
+    }  
 
         function checkGuess() {
             const userGuess = parseInt(document.getElementById("userGuess").value);
@@ -46,8 +46,7 @@
         document.getElementById("userGuess").disabled = false;
             document.getElementById("userGuess").value = " ";
             messageEl.textContent = " ";
-                const randomNumber = Math.floor(Math.random() * 100) + 1;
-                let attempts = 0;
+                beginGame();
             
         }
     </script>
