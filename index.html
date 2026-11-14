@@ -9,13 +9,13 @@
     <button onclick="checkGuess()">Check Guess</button>
     <p id="message"></p> 
     
-    <button onClick="beginGame()">Begin Game</button>
+    <button onClick="beginGame()">Begin Game</button> 
     <button onclick="resetGame()">Reset Game</button> 
     
    
     <script>
 
-    function beginGame{
+    function beginGame(){
         // Generate random number between 1 and 100
         const randomNumber = Math.floor(Math.random() * 100) + 1;
         let attempts = 0;
